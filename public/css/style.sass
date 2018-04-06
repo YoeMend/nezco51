@@ -1,0 +1,278 @@
+
+@import _variables 
+@import _basic  
+
+@font-face
+	font-family: 'HelveticaNeueLTCom-BlkCn'
+	src: url('../font/original_HelveticaNeueLTCom-BlkCn.eot?#iefix') format('embedded-opentype'), url('../font/original_HelveticaNeueLTCom-BlkCn.woff') format('woff'), url('../font/original_HelveticaNeueLTCom-BlkCn.ttf') format('truetype'), url('../font/original_HelveticaNeueLTCom-BlkCn.svg') format('svg')
+	font-weight: normal
+	font-style: normal
+
+@font-face
+	font-family: 'lg'
+	src: url('../font/lg.eot?#iefix') format('embedded-opentype'), url('../font/lg.woff') format('woff'), url('../font/lg.ttf') format('truetype'), url('../font/lg.svg') format('svg')
+	font-weight: normal
+	font-style: normal
+
+body
+	font-size: 14px
+	background-color: $black 
+
+h1
+	font-size: 2rem
+
+a:hover
+	color: $black
+
+.video_home
+	position: fixed
+	top: 50%
+	left: 50%
+	min-width: 100%
+	min-height: 100%
+	width: auto
+	height: auto
+	z-index: -100
+	transform: translate(-50%, -50%)
+
+.video
+	min-width: 100%
+	min-height: 100%
+	height: 100%
+	width: 100%
+
+.texto
+	min-height: 100%
+
+.svg_video
+	position: fixed
+	top: 50%
+	left: 50%
+	min-width: 100%
+	min-height: 100%
+	width: auto
+	height: auto
+	z-index: -99
+	transform: translate(-50%, -50%)
+	background-image: url('../images/svg_video.svg')
+	background-repeat: no-repeat
+	background-size: cover
+
+.navbar
+	a
+		color: $white !important
+
+.navbar-nav 
+	.nav-item
+		.nav-link
+			padding-left: 3rem
+
+.navbar
+	background-color: rgba($white,.1)
+	@media only screen and (max-width: 768px)
+		background-color: rgba(0,0,0,.8)
+
+.navbar-light
+	.navbar-toggler
+		border-color: $greyNezco
+		background-color: $greyNezco
+		opacity: .7
+
+.tit
+	font-family: $fontNezco
+	font-weight: normal
+
+.top-fijo
+	top: 80px
+	z-index: 1000
+
+.enlaces
+	color: $vinoNezco
+	text-decoration: underline $vinoNezco
+	font-weight: bold
+	text-transform: uppercase
+
+
+
+.icon-left
+	font-size: 4rem !important
+	left: 0px
+	@media only screen and (max-width: 767px)
+		display: none !important
+
+.icon-right
+	font-size: 4rem !important
+	right: 0px
+	@media only screen and (max-width: 767px)
+		display: none !important
+
+.bg-nubes
+	@extend .bg-fixed
+	background-image: url('../images/bg_nubes.jpg')
+	
+.item-footer
+	a
+		color: $white
+	a:hover
+		font-weight: bold
+		text-decoration: underline $white
+
+.sub-item-footer
+	a
+		color: $greyNezco
+		padding-top: 3px
+		padding-bottom: 3px
+	a:hover
+		color: $yellowt
+		font-weight: 0
+		text-decoration: none
+
+.img-producto2
+	height: 400px
+	min-height: 400px
+	overflow: hidden
+	position: absolute
+	top: 20%
+	left: 20%
+	@media only screen and (max-width: 767px)
+		top: 0%
+		left: 0%
+		img
+			height: auto !important
+
+
+.img-producto
+	height: 400px
+	min-height: 400px
+	overflow: hidden
+	img
+		+scala-img(2)
+	@media only screen and (max-width: 767px)
+		visibility: hidden
+		height: auto
+		min-height: auto
+		img
+			height: auto !important
+
+.carousel-inner-productos
+	min-height: 400px
+
+.logo-sec
+	@media only screen and (max-width: 767px)
+		display: none
+
+input[type="text"]:focus
+	border-color: $vinoNezco
+	
+.textarea
+	textarea:focus
+		border-color: $vinoNezco
+
+input[type="email"]:focus
+	border-color: $vinoNezco
+
+.btn-primary
+	background-color: $vinoNezco
+	border: none
+
+::selection
+	background-color: $greyClaro
+
+.btn-primary:hover
+	background-color: $greyNezco
+
+.filter
+	.btn
+		white-space: normal
+
+
+#cg
+	color: $black !important
+	@media only screen and (min-width: 992px)
+		display: none
+
+#filter 
+	.navbar-toggler
+		background: none !important
+.card
+	border: none
+	background: none
+
+#filter_item
+	color: $black !important
+	//padding-top: .6em 
+	font-style: italic
+	font-weight: bold
+
+#filter_item:hover
+	text-decoration: none
+
+.item-ley
+	background-color: rgba($black, .6)
+	height: 100%
+	display: none
+	transition: display 2s
+	i
+		font-size: 1.5rem
+		color: $white
+		border: 1px solid transparent
+		border-radius: 50%
+		padding: 1rem
+		background-color: $greyNezco
+		transition: background .6s
+	i:hover
+		background-color: $vinoNezco
+
+.item-l:hover
+	.item-ley
+		display: block
+
+.item-l::selection
+	.item-ley
+		display: block
+
+.item-galery
+	background-color: rgba($black, .6)
+	height: 100%
+	display: none
+	transition: display 2s
+	i
+		font-size: 1.5rem
+		color: $white
+		border: 1px solid transparent
+		border-radius: 50%
+		padding: 1rem
+		background-color: $greyNezco
+		transition: background .6s
+	i:hover
+		background-color: $vinoNezco
+
+.item-g
+	text-decoration: none !important
+.item-g:hover
+	.item-galery
+		display: block
+
+.item-g::selection
+	.item-galery
+		display: block
+
+.card
+	width: 30%
+	@media only screen and (max-width: 767px)
+		width: 89%
+	@media only screen and (min-width: 768px) and (max-width: 992px)
+		width: 45%
+
+.cards
+	width: 100%
+	max-width: 1040px
+	margin: 0 auto
+
+.cards-galery
+	.card
+		width: 22%
+		@media only screen and (max-width: 767px)
+			width: 89% !important
+		@media only screen and (min-width: 768px) and (max-width: 992px)
+			width: 45% !important

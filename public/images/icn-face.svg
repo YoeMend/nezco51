@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="1100 7401 60.233 60.232">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #989898;
+      }
+    </style>
+  </defs>
+  <g id="icn-face" transform="translate(1100 7401)">
+    <g id="Layer_1" data-name="Layer 1" transform="translate(0)">
+      <path id="Path_195" data-name="Path 195" class="cls-1" d="M60.223,30.11A30.116,30.116,0,1,1,30.108,0,30.117,30.117,0,0,1,60.223,30.11Z" transform="translate(0.01 0)"/>
+      <path id="Path_196" data-name="Path 196" class="cls-2" d="M39.584,56.766V40.693H34.24V34.476h5.344V28.912s.243-6.454,6.532-7.232h6.33v5.742H48.378a2.379,2.379,0,0,0-2.334,2.512v4.6H52.32l-.837,6.157H46.044V56.778Z" transform="translate(-13.903 -8.807)"/>
+    </g>
+  </g>
+</svg>

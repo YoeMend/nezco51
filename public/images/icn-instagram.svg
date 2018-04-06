@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="762 7401 60.221 60.221">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #989898;
+      }
+    </style>
+  </defs>
+  <g id="icn-instagram" transform="translate(762 7401)">
+    <g id="Layer_1" data-name="Layer 1">
+      <path id="Path_175" data-name="Path 175" class="cls-1" d="M60.221,30.11A30.11,30.11,0,1,1,30.11,0a30.11,30.11,0,0,1,30.11,30.11Z"/>
+      <path id="Path_176" data-name="Path 176" class="cls-2" d="M55.507,51.74a4.323,4.323,0,0,1-4.2,4.435H29.529a4.329,4.329,0,0,1-4.21-4.435V29.485a4.329,4.329,0,0,1,4.21-4.435H51.3a4.323,4.323,0,0,1,4.2,4.435Z" transform="translate(-10.285 -10.176)"/>
+      <path id="Path_177" data-name="Path 177" class="cls-1" d="M61,36.18V32.065s.077-.855.849-.855h4.192s.778.077.778.778v4.346s-.172.689-.677.689H61.753A.808.808,0,0,1,61,36.18Z" transform="translate(-24.779 -12.678)"/>
+      <path id="Path_178" data-name="Path 178" class="cls-1" d="M30.626,47.089h2.969s-1.674,5.754,3,9.613a9.673,9.673,0,0,0,6.169,2.215s4.495-.19,6.929-3.29A10.48,10.48,0,0,0,51.669,47h2.856V60.526s-.059.908-.908.908H31.457s-.867-.166-.867-.867S30.626,47.089,30.626,47.089Z" transform="translate(-12.426 -19.093)"/>
+      <ellipse id="Ellipse_3" data-name="Ellipse 3" class="cls-1" cx="5.961" cy="5.962" rx="5.961" ry="5.962" transform="translate(23.006 34.905) rotate(-76.72)"/>
+    </g>
+  </g>
+</svg>
