@@ -87,10 +87,11 @@ class DocumentoController extends Controller
 
     public function update(Request $request, $id)
     {
-
+        $enlace = $request["enlace"];
         $documento = Documentos::find($id);
-
+       
         $documento->fill($request->all());
+        $documento->enlace = $enlace;
         $documento->save();
         return redirect()->route('documento.edit', $id)->with("notificacion","Se ha guardado correctamente su información");
 
@@ -99,7 +100,7 @@ class DocumentoController extends Controller
     public function destroy($id)
     {
 
-        $documento= Documento::find($id);
+        $documento= Documentos::find($id);
         $documento->destroy($id);
 
         return redirect()->route('documento.index');
