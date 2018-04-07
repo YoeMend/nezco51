@@ -15,16 +15,32 @@
 Route::get('auth/login', function () {
     return view('auth.login');
 });
+ Route::get('auth/login', [
+		'uses' => 'Auth\AuthController@getLogin',
+		'as'   => 'login'
+	]);
+ Route::post('auth/logout', [
+		'uses' => 'Auth\AuthController@getLogout',
+		'as'   => 'logout'
+	]);
 
-    Route::get('auth/login', 'Auth\AuthController@getLogin')->name('login');
+    //Route::get('auth/login', 'Auth\AuthController@getLogin')->name('login');
     Route::post('auth/login', 'Auth\AuthController@postLogin');
-    Route::post('auth/logout', 'Auth\AuthController@getLogout')->name('logout');
+    //Route::post('auth/logout', 'Auth\AuthController@getLogout')->name('logout');
 
 Route::group(['middleware' => 'auth'], function () {
+ //Route::get('/administrar', 'HomeController@index')->name('home');
+ Route::get('administrar', [
+		'uses' => 'HomeController@index',
+		'as'   => 'home'
+	]);
+ //Route::get('/administrar/home', 'HomeController@index')->name('home');
+ Route::get('administrar/home', [
+		'uses' => 'HomeController@index',
+		'as'   => 'home'
+	]);
    
-   Route::get('/administrar', 'HomeController@index')->name('home');
-   Route::get('/administrar/home', 'HomeController@index')->name('home');
-    Route::resource('categoriaimagen', 'configurar\Categoria_imagenController');
+     Route::resource('categoriaimagen', 'configurar\Categoria_imagenController');
     Route::get('categoriaimagen/{id}/destroy', [
 		'uses' => 'configurar\Categoria_imagenController@destroy',
 		'as'   => 'categoriaimagen.destroy'

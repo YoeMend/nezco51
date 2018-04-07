@@ -25,11 +25,11 @@ class Categoria_productoController extends Controller
        ->select('a.id','a.descripcion','a.estatus','a.created_at')
        ->orderBy('a.descripcion','asc')
        ->paginate(6);}
-        return view('backend.configurar.CategoriaProducto.index')->with('categoriaproducto', $categoriaproducto);
+        return view('backend.configurar.categoriaproducto.index')->with('categoriaproducto', $categoriaproducto);
       
     }
     public function create(){
-    	return view('backend.configurar.CategoriaProducto.crear');
+    	return view('backend.configurar.categoriaproducto.crear');
     }
 
     public function store(Request $request)
@@ -41,7 +41,7 @@ class Categoria_productoController extends Controller
             //dd($descripcion);
             if(CategoriaProducto::where('descripcion',$descripcion)->first()){
                 
-            return redirect()->route('CategoriaProducto.index')->with("notificacion","Categoría Ya se encuentra Registrada");
+            return redirect()->route('categoriaproducto.index')->with("notificacion","Categoría Ya se encuentra Registrada");
 
             }
             $CategoriaProducto = new CategoriaProducto($request->all());
@@ -60,7 +60,7 @@ class Categoria_productoController extends Controller
     public function show($id)
     {
         $categoriaproducto=CategoriaProducto::find($id);
-        return view('backend.configurar.CategoriaProducto.show')->with('categoriaproducto',$categoriaproducto);
+        return view('backend.configurar.categoriaproducto.show')->with('categoriaproducto',$categoriaproducto);
         //
     }
 
@@ -68,7 +68,7 @@ class Categoria_productoController extends Controller
     {
         //$id=decodifica($id);
         $categoriaproducto=CategoriaProducto::find($id);
-        return view('backend.configurar.CategoriaProducto.edit')->with('categoriaproducto',$categoriaproducto);
+        return view('backend.configurar.categoriaproducto.edit')->with('categoriaproducto',$categoriaproducto);
     }
 
     public function update(Request $request, $id)
@@ -87,7 +87,7 @@ class Categoria_productoController extends Controller
         $CategoriaProducto= CategoriaProducto::find($id);
         $CategoriaProducto->destroy($id);
 
-            return redirect()->route('CategoriaProducto.index');
+            return redirect()->route('categoriaproducto.index');
         
     }
 }

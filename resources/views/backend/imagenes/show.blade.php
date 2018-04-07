@@ -58,18 +58,17 @@
 				<div class="form-group col-md-6">
                   <div class="form-group">
 					<label>Imagen</label>
-					<?php if ($imagenes->categoria_imagen_id==1): ?>
-						<p><img src="{{ asset('img/productos/'.$imagenes->url) }}" style="max-width: 100%"></p>	
-					<?php endif ?>
-					<?php if ($imagenes->categoria_imagen_id==2): ?>
-						<p><img src="{{ asset('img/servicios/'.$imagenes->url) }}" style="max-width: 100%"></p>	
-					<?php endif ?>
-					<?php if ($imagenes->categoria_imagen_id==3): ?>
-						<p><img src="{{ asset('img/galeria/'.$imagenes->url) }}" style="max-width: 100%"></p>	
-					<?php endif ?>
-					<?php if ($imagenes->categoria_imagen_id==4): ?>
-						<p><img src="{{ asset('img/empresa/'.$imagenes->url) }}" style="max-width: 100%"></p>	
-					<?php endif ?>
+					  <?php 
+					  if ($imagenes->categoria_imagen_id==1)
+					     $zurl=public_path().'/img/productos/'.$imagenes->url;
+					  if ($imagenes->categoria_imagen_id==2)
+					     $zurl=URL::to('/').'/public/img/servicios/'.$imagenes->url;
+					  if ($imagenes->categoria_imagen_id==3)
+					     $zurl=URL::to('/').'/public/img/galeria/'.$imagenes->url;
+					  if ($imagenes->categoria_imagen_id==4)
+					     $zurl=URL::to('/').'/public/img/empresa/'.$imagenes->url;
+					    ?>
+						<p><img src="{{ $zurl }}" style="max-width: 100%"></p>	
 
 					
 

@@ -58,18 +58,19 @@
 											<td width="5%">{{ $cate->url }}</td>
 											<td width="2%">{{ $cate->publico }}</td>
 					<td width="2%" align="center">
-					<?php if ($cate->categoria_imagen_id==1): ?>
-						<p><img src="{{ asset('img/productos/'.$cate->url) }}" style="max-width: 50%"></p>	
-					<?php endif ?>
-					<?php if ($cate->categoria_imagen_id==2): ?>
-						<p><img src="{{ asset('img/servicios/'.$cate->url) }}" style="max-width: 50%"></p>	
-					<?php endif ?>
-					<?php if ($cate->categoria_imagen_id==3): ?>
-						<p><img src="{{ asset('img/galeria/'.$cate->url) }}" style="max-width: 50%"></p>	
-					<?php endif ?>
-					<?php if ($cate->categoria_imagen_id==4): ?>
-						<p><img src="{{ asset('img/empresa/'.$cate->url) }}" style="max-width: 50%"></p>	
-					<?php endif ?>
+					<?php
+					  if ($cate->categoria_imagen_id==1)
+					     $zurl='/public/img/productos/'.$cate->url;
+					  if ($cate->categoria_imagen_id==2)
+					     $zurl='/public/img/servicios/'.$cate->url;
+					  if ($cate->categoria_imagen_id==3)
+					     $zurl='/public/img/galeria/'.$cate->url;
+					  if ($cate->categoria_imagen_id==4)
+					     $zurl='/public/img/empresa/'.$cate->url;
+
+					?>	
+					<p><img src="{{ asset ($zurl) }}" style="max-width: 50%"></p>	
+					
 												
 
 											</td>

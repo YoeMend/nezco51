@@ -71,7 +71,7 @@
                   <div class="form-group">
                     <label>Imagen Principal(Imagen Actual)</label>
 
-                   <p><img src="{{ asset('img/servicios/'.$servicio->imagen) }}" style="max-width: 100%"></p>
+                   <p><img src="{{ asset('public/img/servicios/'.$servicio->imagen) }}" style="max-width: 100%"></p>
                                 
 
 
