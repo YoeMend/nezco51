@@ -60,13 +60,13 @@
 					<td width="2%" align="center">
 					<?php
 					  if ($cate->categoria_imagen_id==1)
-					     $zurl='/public/img/productos/'.$cate->url;
+					     $zurl='img/productos/'.$cate->url;
 					  if ($cate->categoria_imagen_id==2)
-					     $zurl='/public/img/servicios/'.$cate->url;
+					     $zurl='img/servicios/'.$cate->url;
 					  if ($cate->categoria_imagen_id==3)
-					     $zurl='/public/img/galeria/'.$cate->url;
+					     $zurl='img/galeria/'.$cate->url;
 					  if ($cate->categoria_imagen_id==4)
-					     $zurl='/public/img/empresa/'.$cate->url;
+					     $zurl='img/empresa/'.$cate->url;
 
 					?>	
 					<p><img src="{{ asset ($zurl) }}" style="max-width: 50%"></p>	

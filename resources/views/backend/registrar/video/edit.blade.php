@@ -43,7 +43,7 @@
                     <label>video Principal(video Actual)</label>
                      
                    <p>
-                  	<video src="{{ asset('public/video/principal/'.$video->url) }}" class="video_home"  loop muted preload autoplay poster=""></video></p>
+                  	<video src="{{ asset('video/principal/'.$video->url) }}" class="video_home"  loop muted preload autoplay poster=""></video></p>
 
 
                     <input name="archivo" type="file" id="video" accept="video/ogg, video/mp4" />

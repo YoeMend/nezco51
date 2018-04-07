@@ -60,15 +60,15 @@
 					<label>Imagen</label>
 					  <?php 
 					  if ($imagenes->categoria_imagen_id==1)
-					     $zurl=public_path().'/img/productos/'.$imagenes->url;
+					     $zurl='img/productos/'.$imagenes->url;
 					  if ($imagenes->categoria_imagen_id==2)
-					     $zurl=URL::to('/').'/public/img/servicios/'.$imagenes->url;
+					     $zurl='img/servicios/'.$imagenes->url;
 					  if ($imagenes->categoria_imagen_id==3)
-					     $zurl=URL::to('/').'/public/img/galeria/'.$imagenes->url;
+					     $zurl='img/galeria/'.$imagenes->url;
 					  if ($imagenes->categoria_imagen_id==4)
-					     $zurl=URL::to('/').'/public/img/empresa/'.$imagenes->url;
+					     $zurl='img/empresa/'.$imagenes->url;
 					    ?>
-						<p><img src="{{ $zurl }}" style="max-width: 100%"></p>	
+						<p><img src="{{ asset ($zurl) }}" style="max-width: 100%"></p>	
 
 					
 
