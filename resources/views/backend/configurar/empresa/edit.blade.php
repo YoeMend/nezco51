@@ -47,7 +47,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label class="control-label">Estatus</label>
-                    <select id="estatus" class="form-control">  
+                    <select name="estatus" id="estatus" class="form-control">  
                         <option value="">Seleccione Estatus</option>
                         <option value="Activo"@if(old('estatus', $empresa->estatus)=='Activo') selected @endif>Activo</option>
                         <option value="Desactivado"@if(old('estatus', $empresa->estatus)=='Desactivado') selected @endif>Desactivado</option>

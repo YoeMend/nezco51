@@ -60,8 +60,10 @@ class Categoria_DocumentoController extends Controller
 
     public function update(Request $request, $id)
     {
+        $estatus = $request["estatus"];
         $categoriadocumento = CategoriaDocumentos::find($id);
         $categoriadocumento->fill($request->all());
+        $categoriadocumento->estatus = $estatus;
         $categoriadocumento->save();
         
       return redirect()->route('categoriadocumento.index')->with("notificacion","Se ha guardado correctamente su información");

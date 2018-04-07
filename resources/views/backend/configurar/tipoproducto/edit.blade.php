@@ -49,7 +49,7 @@
             <div class="form-group">
                 <label class="control-label">Estatus</label>
                 <div class="col-sm-4">
-                    <select id="estatus" class="form-control">  
+                    <select name="estatus" id="estatus" class="form-control">  
                         <option value="">Seleccione Estatus</option>
                         <option value="Activo"@if(old('estatus', $tipoproducto->estatus)=='Activo') selected @endif>Activo</option>
                         <option value="Desactivado"@if(old('estatus', $tipoproducto->estatus)=='Desactivado') selected @endif>Desactivado</option>

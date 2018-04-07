@@ -19,14 +19,14 @@ class Tipo_ProductoController extends Controller
         //$tipoproducto = TipoProducto::orderBy('id', 'ASC')->paginate(6);
          $tipoproducto = DB::table('tipo_producto as a')
                          ->join('categoria_producto as b','a.categoria_producto_id','=','b.id')
-                         ->select('a.id','a.descripcion','b.estatus','a.created_at','b.descripcion as categoria')
+                         ->select('a.id','a.descripcion','a.estatus','a.created_at','b.descripcion as categoria')
                          ->where('a.descripcion','LIKE','%'.$valor.'%')
                          ->orderBy('a.id','desc')
                          ->paginate(6);
                      }else{
          $tipoproducto = DB::table('tipo_producto as a')
                          ->join('categoria_producto as b','a.categoria_producto_id','=','b.id')
-                         ->select('a.id','a.descripcion','b.estatus','a.created_at','b.descripcion as categoria')
+                         ->select('a.id','a.descripcion','a.estatus','a.created_at','b.descripcion as categoria')
                          ->orderBy('a.id','desc')
                          ->paginate(6);
 
@@ -82,8 +82,10 @@ class Tipo_ProductoController extends Controller
 
     public function update(Request $request, $id)
     {
+        $estatus=$request["estatus"];
         $tipoproducto = TipoProducto::find($id);
         $tipoproducto->fill($request->all());
+        $tipoproducto->estatus = $estatus;
         $tipoproducto->save();
         
 
