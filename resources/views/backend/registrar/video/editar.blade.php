@@ -66,7 +66,7 @@
                     <label>Video Actual)</label>
                      
                    <p>
-                  	<video src="{{ asset('video/empresa/'.$video->url) }}" class="video_home"  loop muted preload autoplay poster=""></video></p>
+                  	<video src="{{ asset('public/video/empresa/'.$video->url) }}" class="video_home"  loop muted preload autoplay poster=""></video></p>
                 </div>
 
 			</div>

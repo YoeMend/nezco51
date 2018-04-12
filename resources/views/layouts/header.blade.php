@@ -23,8 +23,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Main CSS-->
-    <link rel="stylesheet"  type="text/css" href="{{asset('/') }}css/main.css" type="text/css">
-    <link rel="stylesheet"  type="text/css" href="{{asset('/') }}css/imagen.css" type="text/css">
+    <link rel="stylesheet"  type="text/css" href="{{ asset('css/main.css') }}" type="text/css">
+    <link rel="stylesheet"  type="text/css" href="{{ asset('css/imagen.css') }}" type="text/css">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -106,14 +106,14 @@
 
     <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
     <script src="{{ asset('js/popper.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('js/main.js')}}"></script>
     <!-- The javascript plugin to display page loading on top-->
-    <script src="{{ asset('js/plugins/pace.min.js') }}"></script>
-    <script src="{{ asset('tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('js/plugins/pace.min.js')}}"></script>
+    <script src="{{ asset('tinymce/tinymce.min.js')}}"></script>
 
     <!-- Page specific javascripts-->
-    <script type="text/javascript" src="{{ asset('js/plugins/chart.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/plugins/chart.js')}}"></script>
     <script type="text/javascript">
       var data = {
       	labels: ["Enero", "Febrero", "Marzo", "Abril", "May"],

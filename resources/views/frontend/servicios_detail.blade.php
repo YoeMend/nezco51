@@ -33,7 +33,7 @@
 								<ul id="lightgallery" class=" col cards cards-galery text-center list-unstyled row">
 
 									
-									<li class=" card py-2" data-responsive="{{ asset('img/servicios/'.$servicio_detail->imagen) }}" data-src="{{ asset('img/servicios/'.$servicio_detail->imagen) }}" data-sub-html="{{ $servicio_detail->titulo }}" {{-- data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1" --}}>
+									<li class=" card py-2" data-responsive="{{ asset('public/img/servicios/'.$servicio_detail->imagen) }}" data-src="{{ asset('img/servicios/'.$servicio_detail->imagen) }}" data-sub-html="{{ $servicio_detail->titulo }}" {{-- data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1" --}}>
 									<a href="">
 				                      <img src="{{ asset('img/servicios/'.$servicio_detail->imagen) }}" alt="{{ $servicio_detail->titulo }}" class="img-fluid">
 				                    </a>

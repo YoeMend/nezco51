@@ -206,7 +206,7 @@
 
 		{{-- CONTACTO --}}
 
-		@include ('Frontend.contacto')
+		@include ('frontend.contacto')
 
 	</div>
 	

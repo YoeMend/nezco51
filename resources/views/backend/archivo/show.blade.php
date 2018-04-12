@@ -53,7 +53,7 @@
 				<div class="form-group col-md-6">
 					<div class="form-group">
 						<label>Archivo</label>
-						<p><iframe src="{{ asset('documentos/'.$archivo->url) }}" style="max-width: 100%"></iframe></p>				
+						<p><iframe src="{{ asset('public/documentos/'.$archivo->url) }}" style="max-width: 100%"></iframe></p>				
 
 						</div>
 					</div>

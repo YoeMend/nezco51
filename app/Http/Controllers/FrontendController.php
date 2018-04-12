@@ -14,20 +14,22 @@ use App\Galeria;
 use App\Imagenes;
 use App\Video;
 use App\TipoProducto;
+use Mail;
 
 class FrontendController extends Controller
 {
     public function index(){
     	$id=1;
+
         $imagenes= Imagenes::find($id);
         $_SESSION['banner'] = $imagenes->url;
-        //dd($_SESSION['banner']);
+        
     	$servicios = DB::table('servicio')-> where('publico','Si')->where('inicio','1')->orderBy('posicion', 'ASC')-> get();
     	$productos = DB::table('producto')-> where('publico','Si')->where('inicio','1')->orderby('posicion', 'ASC')-> get();
     	$logo_empresa   = DB::table('empresa')-> where('publico','Si')->where('estatus','Activo')-> get();
 
     	$video   = Video::where('publico','Si')->where('categoria_video_id','1')-> first();
-
+        
 		return view('frontend.index')->with('servicios',$servicios)->with('productos',$productos)->with('logo_empresa',$logo_empresa)->with('video',$video);
 	}
 	
@@ -125,14 +127,25 @@ class FrontendController extends Controller
 	}
 	public function galeriaFront(){
 
-		$galerias = Galeria::where('publico','Si')->get();
-
-		$imagenes = Galeria::find(1)->imagenesGalery()->where('categoria_imagen_id','=','3')->first();
+		//$galerias = Galeria::where('publico','Si')->get();
+         $galerias = DB::table('galeria as a')
+                ->join('imagenes as b','a.id','=','b.tipo_id')
+                ->select(DB::raw('min(b.url) as zurl'),'a.id','a.nombre','a.publico', 'b.publico as pub')
+                ->where('a.publico','Si')
+                ->where('b.publico','Si')
+                ->where('b.categoria_imagen_id',3)
+                ->groupby('a.id')->get();
+                         
+       
+       // ->select('a.id','a.codigo','a.titulo','a.descripcion as 
+                   
+		//$imagenes = Galeria::find(1)->imagenesGalery()->where('categoria_imagen_id','=','3')->first();
 
 		//$imagenes = Imagenes::where('publico', 'Si')->first();
 
-		return view('frontend.galeria')->with('galerias', $galerias)->with('imagenes', $imagenes);
+		return view('frontend.galeria')->with('galerias', $galerias);
 	}
+
 	public function galeria_detail($id_categoria, $id_galeria){
 
 		$imagenes = Imagenes::where('categoria_imagen_id',$id_categoria)->where('tipo_id',$id_galeria)->where('publico','Si')->get();
@@ -148,5 +161,24 @@ class FrontendController extends Controller
 		$productos = DB::table('producto')-> where('publico','Si')->where('inicio','1')->orderby('posicion', 'ASC')-> get();
 
 		return view('frontend.pruebas')->with('productos',$productos);
+	}
+	public function enviar(Request $request)
+	{
+	   $texto=$request["mensaje"];
+	   $email = $request["email"];
+	   $nombres= $request["nombres"];
+	   $data=[
+                "email"=>$email,
+                "texto"=>$texto,
+                "nombres"=>$nombres,
+                
+                
+            ];
+	   
+
+       Mail::send('emails.template', array('nombres'=>Input::get('nombres')), function($message){
+        $message->to(Input::get('email'), Input::get('nombres').' '.Input::get('texto'))->subject('Contacto Nezco!');
+    });
+
 	}
 }
