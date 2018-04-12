@@ -33,7 +33,7 @@
 							    				<img class="img-fluid h-100" src="{{ asset('img/productos/'.$productos[$i]->imagen) }}" alt="First slide">
 							    			</div>
 							    			<div class="img-producto2 w-100">
-							    				<img class="img-fluid h-100" src="{{ asset('img/productos/'.$productos[$i]->imagen) }}" alt="First slide">
+							    				<img class="img-fluid w-100" src="{{ asset('img/productos/'.$productos[$i]->imagen) }}" alt="First slide">
 							    			</div>
 							    			
 							    			

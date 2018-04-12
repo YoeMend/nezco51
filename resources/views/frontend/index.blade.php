@@ -2,7 +2,7 @@
 
 @section ('cabecera')
 
-	@include ('Frontend.sectionFront.video')
+	@include ('frontend.sectionFront.video')
 
 @endsection
 
@@ -61,10 +61,10 @@
 
 @section ('etc')
 
-	@include ('Frontend.sectionFront.servicios')
-	@include ('Frontend.sectionFront.productos')
-	@include ('Frontend.sectionFront.twitter')
-	@include ('Frontend.sectionFront.clientes')
+	@include ('frontend.sectionFront.servicios')
+	@include ('frontend.sectionFront.productos')
+	@include ('frontend.sectionFront.twitter')
+	@include ('frontend.sectionFront.clientes')
 
 	<script>
 	window.counter = function() {

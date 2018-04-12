@@ -16,7 +16,7 @@
 
 			<div class="col-lg-12">
 					<div class="form-group col-lg-4 col-md-6 offset-md-6 offset-lg-8 p-0">
-						<form action="">
+						<form action="" accept-charset="UTF-8">
 							<input type="text" class="form-control" placeholder="Buscar">
 						</form> 
 					</div>
@@ -110,7 +110,7 @@
 	</div>
 </div>
 
-	<script src="{{ asset('js/minigrid.min.js') }}"></script>
+	<script src="{{ asset('public/js/minigrid.min.js') }}"></script>
 	<script>
 
     (function(){

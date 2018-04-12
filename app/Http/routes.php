@@ -180,6 +180,10 @@ Route::resource('usuarios', 'configurar\UsersController');
 // RUTAS FRONTEND
 //////////
 Route::get('/', [
+      'as'=>'frontend.construccion',
+      'uses'=>'FrontendController@construccion' 
+      ]);
+Route::get('index', [
       'as'=>'frontend.index',
       'uses'=>'FrontendController@index' 
       ]);
@@ -195,6 +199,7 @@ Route::get('servicios_detail/{categoriaid}/{id}', [
       'as'=>'frontend.servicios_detail',
       'uses'=>'FrontendController@servicios_detail' 
       ]);
+//Route::resourse('producto', 'FrontendController');
 Route::get('productos', [
       'as'=>'frontend.productos',
       'uses'=>'FrontendController@productos' 
