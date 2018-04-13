@@ -18,14 +18,14 @@
 	</div>
 	<ul class="app-breadcrumb breadcrumb side">
 		<li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-		<li class="breadcrumb-item active"><a href="{{ route('galeria.index') }}">Atrás</a></li>
+		<li class="breadcrumb-item active"><a href="{{ route('galeriab.index') }}">Atrás</a></li>
 	</ul>
 </div>
 <div class="row">
 	<div class="col-md-12">
 		<div class="tile">
 			
- <form name="form1" class="row"  enctype="multipart/form-data" method="POST" action="{{route ('galeria.store')}}" accept-charset="UTF-8"><input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
+ <form name="form1" class="row"  enctype="multipart/form-data" method="POST" action="{{route ('galeriab.store')}}" accept-charset="UTF-8"><input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 
 				
 				<div class="form-group col-md-6">
@@ -36,7 +36,7 @@
 					<label class="control-label">Descripción</label>
 					<textarea class="form-control" rows="6" name="descripcion" id="descripcion" placeholder="Descripción y/o Detalles"></textarea>
 				</div>
-				<div class="form-group col-md-1">
+				<div class="form-group col-md-2">
 					<label class="control-label">Público</label>
 					<select id="publico"  name="publico" class="form-control">	
 						<option value="">Seleccione</option>
@@ -47,7 +47,7 @@
 
 			</div>
 			<div class="tile-footer">
-						<button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Guardar</button>&nbsp;&nbsp;&nbsp;<a class="btn btn-secondary" href="{{ route('galeria.index') }}"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancelar</a>
+						<button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Guardar</button>&nbsp;&nbsp;&nbsp;<a class="btn btn-secondary" href="{{ route('galeriab.index') }}"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancelar</a>
 
 
 

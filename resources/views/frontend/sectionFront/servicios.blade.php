@@ -41,7 +41,7 @@
 						    			
 						    		</div>
 						    		<div class="col-lg-5 col-md-5 mt-3 mt-lg-0 h-360px overflow-hidden" >
-						    			<img class="d-block img-fluid h-100" src="{{ asset('img/servicios/'.$servicios[$i]->imagen) }}" alt="{{ $servicios[$i]->titulo }} ">
+						    			<img class="d-block img-fluid h-100" src="{{ asset('public/img/servicios/'.$servicios[$i]->imagen) }}" alt="{{ $servicios[$i]->titulo }} ">
 						    		</div>
 						    	</div>
 						    </div>

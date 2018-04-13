@@ -1,3 +1,4 @@
+
 <div class="modal fade mt-md-5" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
@@ -17,7 +18,7 @@
 		      		<h3 class="tit">Contáctate con nosotros</h3>
 		      	</div>
 		        
-	        	<form action="">
+	        	<form role="form" action="{{ route('enviar') }}" method="POST">
 	        		<div class="row">
 			        	<div class="form-group col-12 col-md-6">
 			        		<input type="text" class="form-control" placeholder="Nombre y Apellido">

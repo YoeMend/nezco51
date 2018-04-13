@@ -15,16 +15,17 @@
 Route::get('auth/login', function () {
     return view('auth.login');
 });
+
  Route::get('auth/login', [
 		'uses' => 'Auth\AuthController@getLogin',
 		'as'   => 'login'
 	]);
- Route::post('auth/logout', [
+Route::post('auth/logout', [
 		'uses' => 'Auth\AuthController@getLogout',
 		'as'   => 'logout'
 	]);
     //Route::get('auth/login', 'Auth\AuthController@getLogin')->name('login');
-    Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
     //Route::post('auth/logout', 'Auth\AuthController@getLogout')->name('logout');
 Route::group(['middleware' => 'auth'], function () {
  //Route::get('/administrar', 'HomeController@index')->name('home');
@@ -83,11 +84,12 @@ Route::group(['middleware' => 'auth'], function () {
 		'uses' => 'Registrar\ServicioController@destroy',
 		'as'   => 'servicio.destroy'
 	]);
-    Route::resource('galeriab', 'Registrar\GaleriaController');
+    
     Route::get('galeriab/{id}/destroy', [
 		'uses' => 'Registrar\GaleriaController@destroy',
 		'as'   => 'galeriab.destroy'
 	]);
+	Route::resource('galeriab', 'Registrar\GaleriaController');
    Route::get('cargatipoproductos','Registrar\ProductoController@cargatipoproductos');
    
    Route::resource('imagenes','ImagenesController');
@@ -187,6 +189,10 @@ Route::get('index', [
       'as'=>'frontend.index',
       'uses'=>'FrontendController@index' 
       ]);
+Route::get('frontend/index', [
+		'uses' => 'FrontendController@index',
+		'as'   => 'frontend.index'
+	]);
 Route::get('/nosotros', [
       'as'=>'frontend.nosotros',
       'uses'=>'FrontendController@nosotros' 
@@ -236,3 +242,8 @@ Route::get('pruebas', [
       'as'=>'frontend.pruebas',
       'uses'=>'FrontendController@pruebas' 
       ]);
+
+Route::post('frontend.enviar', [
+        'uses' => 'FrontendController@enviar',
+        'as'   => 'enviar'
+    ]);
