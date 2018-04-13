@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 @session_start();
 use Illuminate\Http\Request;
@@ -121,6 +120,9 @@ class FrontendController extends Controller
 
 		$documentos = Documentos::where('publico', 'Si')->get();
 
+
+		$documentos = Documentos::where('publico', 'Si')->get();
+
 		$archivos = Archivo::where('publico','Si')->get();
 		
 		return view('frontend.leyes')->with('categorias_documentos', $categorias_documentos)->with('documentos', $documentos)->with('archivos', $archivos );
@@ -160,4 +162,13 @@ class FrontendController extends Controller
 
 		return view('frontend.pruebas')->with('productos',$productos);
 	}
+	public function enviar(Request $request)
+	{
+       Mail::send('emails.template',$request->all(), function ($msj)  {
+            $msj->subject('Correo de Contacto');
+            $msj->to('yoe318@gmail.com');
+        });	}
+	
 }
+
+

@@ -61,18 +61,18 @@
 					<label>Imagen</label>
 					  <?php 
 					  if ($imagenes->categoria_imagen_id==1)
-					     $zurl=URL::to('/').'/img/productos/'.$imagenes->url;
+					     $zurl='img/productos/'.$imagenes->url;
 					  if ($imagenes->categoria_imagen_id==2)
-					     $zurl=URL::to('/').'/img/servicios/'.$imagenes->url;
+					     $zurl='img/servicios/'.$imagenes->url;
 					  if ($imagenes->categoria_imagen_id==3)
-					     $zurl=URL::to('/').'/img/galeria/'.$imagenes->url;
+					     $zurl='img/galeria/'.$imagenes->url;
 					  if ($imagenes->categoria_imagen_id==4)
-					     $zurl=URL::to('/').'/img/empresa/'.$imagenes->url;
+					     $zurl='img/empresa/'.$imagenes->url;
 					  if ($imagenes->categoria_imagen_id==5)
-					     $zurl=URL::to('/').'/img/principal/'.$imagenes->url;
+					     $zurl='img/principal/'.$imagenes->url;
 
 					    ?>
-						<p><img src="{{ $zurl }}" style="max-width: 100%"></p>	
+						<p><img src="{{ asset ($zurl) }}" style="max-width: 100%"></p>	
 					
 
                     <input name="archivo" type="file" id="imagen" accept="image/jpeg, image/png, image/gif, image/svg" />

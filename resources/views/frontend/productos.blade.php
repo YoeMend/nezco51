@@ -71,7 +71,7 @@
 				@foreach($productos as $producto )	
 				<div class="card">
 					<div class="py-2 border-bottom">
-						<img src="{{ asset('img/productos/'.$producto->imagen) }}" alt="" class="img-fluid">
+						<img src="{{ asset('public/img/productos/'.$producto->imagen) }}" alt="" class="img-fluid">
 						<div class="">
 							{{-- ENLACE --}}
 							<a class="c-vino" href="productos_detail/{{ $producto->id }}">
@@ -110,7 +110,7 @@
 	</div>
 </div>
 
-	<script src="{{ asset('js/minigrid.min.js') }}"></script>
+	<script src="{{ asset('public/js/minigrid.min.js') }}"></script>
 	<script>
 
     (function(){

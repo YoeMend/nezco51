@@ -1,3 +1,4 @@
+
 <div class="modal fade mt-md-5" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
@@ -17,16 +18,20 @@
 		      		<h3 class="tit">Contáctate con nosotros</h3>
 		      	</div>
 		        
-	        	<form action="">
+	        	<form role="form" action="{{ route('enviar') }}" method="POST">
 	        		<div class="row">
 			        	<div class="form-group col-12 col-md-6">
-			        		<input type="text" class="form-control" placeholder="Nombre y Apellido">
+			        		<input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre y Apellido">
 			        	</div>
 			        	<div class="form-group col-12 col-md-6">
-			        		<input type="email" class="form-control" placeholder="Correo Electrónico">
+			        		<input type="email" id="email" name="email" class="form-control" placeholder="Correo Electrónico">
 			        	</div>
+  				        	<div class="form-group col-12 col-md-6">
+			        		<input type="text" id="asunto" name="asunto" class="form-control" placeholder="Asunto">
+			        	</div>
+
 			        	<div class="textarea form-group col-12 col-md-12">
-			        		<textarea class="form-control" placeholder="Mensaje" name="" id="" cols="30" rows="10"></textarea>
+			        		<textarea class="form-control" placeholder="Mensaje" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
 			        	</div>
 			        	<div class="col-12 clearfix">
 			        		

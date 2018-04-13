@@ -18,9 +18,9 @@
             <ul id="lightgallery" class="cards cards-galery text-center list-unstyled row">
 
                 @foreach($imagenes as $imagen)
-                <li class=" card py-2" data-responsive="{{ asset('img/galeria/'.$imagen->url) }}" data-src="{{ asset('img/galeria/'.$imagen->url) }}" data-sub-html="{{ $imagen->nombre }}" {{-- data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1" --}}>
+                <li class=" card py-2" data-responsive="{{ asset('public/img/galeria/'.$imagen->url) }}" data-src="{{ asset('public/img/galeria/'.$imagen->url) }}" data-sub-html="{{ $imagen->nombre }}" {{-- data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1" --}}>
                     <a href="">
-                        <img class="img-fluid" src="{{ asset('img/galeria/'.$imagen->url) }}" alt="{{ $imagen->nombre }}">
+                        <img class="img-fluid" src="{{ asset('public/img/galeria/'.$imagen->url) }}" alt="{{ $imagen->nombre }}">
                     </a>
                 </li>
                 @endforeach
@@ -31,8 +31,8 @@
     </div>
 
 
-		<script src="{{ asset('js/lightgallery.js') }}"></script>
-         <script src="{{ asset('js/minigrid.min.js') }}"></script>
+		<script src="{{ asset('public/js/lightgallery.js') }}"></script>
+         <script src="{{ asset('public/js/minigrid.min.js') }}"></script>
         <script>
             lightGallery(document.getElementById('lightgallery'));
         </script>

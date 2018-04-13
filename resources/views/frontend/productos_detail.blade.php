@@ -102,6 +102,17 @@
 								<ul id="lightgallery" class=" col cards cards-galery text-center list-unstyled row">
 
 									
+<<<<<<< HEAD
+									<li class=" card py-2" data-responsive="{{ asset('public/img/productos/'.$producto->imagen) }}" data-src="{{ asset('public/img/productos/'.$producto->imagen) }}" data-sub-html="{{ $producto->titulo }}" {{-- data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1" --}}>
+									<a href="">
+				                      <img src="{{ asset('public/img/productos/'.$producto->imagen) }}" alt="{{ $producto->titulo }}" class="img-fluid">
+				                    </a>
+
+					                @foreach($imagenes as $imagen)
+					                <li class=" card py-2" data-responsive="{{ asset('public/img/productos/'.$imagen->url) }}" data-src="{{ asset('public/img/productos/'.$imagen->url) }}" data-sub-html="{{ $imagen->nombre }}" {{-- data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1" --}}>
+					                    <a href="">
+					                        <img class="img-fluid" src="{{ asset('public/img/productos/'.$imagen->url) }}" alt="{{ $imagen->nombre }}">
+=======
 									<li class=" card py-2" data-responsive="{{ asset('img/productos/'.$producto->imagen) }}" data-src="{{ asset('img/productos/'.$producto->imagen) }}" data-sub-html="{{ $producto->titulo }}" {{-- data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1" --}}>
 									<a href="">
 				                      <img src="{{ asset('img/productos/'.$producto->imagen) }}" alt="{{ $producto->titulo }}" class="img-fluid">
@@ -111,6 +122,7 @@
 					                <li class=" card py-2" data-responsive="{{ asset('img/productos/'.$imagen->url) }}" data-src="{{ asset('img/productos/'.$imagen->url) }}" data-sub-html="{{ $imagen->nombre }}" {{-- data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1" --}}>
 					                    <a href="">
 					                        <img class="img-fluid" src="{{ asset('img/productos/'.$imagen->url) }}" alt="{{ $imagen->nombre }}">
+>>>>>>> bc102a30696c0eb0eeed5681461c740d81db9a29
 					                    </a>
 					                </li>
 					                @endforeach
@@ -125,8 +137,13 @@
 		</div>
 	</div>
 
+<<<<<<< HEAD
+<script src="{{ asset('public/js/lightgallery.js') }}"></script>
+         <script src="{{ asset('public/js/minigrid.min.js') }}"></script>
+=======
 <script src="{{ asset('js/lightgallery.js') }}"></script>
          <script src="{{ asset('js/minigrid.min.js') }}"></script>
+>>>>>>> bc102a30696c0eb0eeed5681461c740d81db9a29
         <script>
             lightGallery(document.getElementById('lightgallery'));
         </script>

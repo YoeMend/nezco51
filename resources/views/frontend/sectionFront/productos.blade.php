@@ -30,10 +30,10 @@
 							    		
 							    		<div class="col-12 col-lg-4 col-md-5 mt-3 mt-lg-0">
 							    			<div class="img-producto w-100">
-							    				<img class="img-fluid h-100" src="{{ asset('img/productos/'.$productos[$i]->imagen) }}" alt="First slide">
+							    				<img class="img-fluid h-100" src="{{ asset('public/img/productos/'.$productos[$i]->imagen) }}" alt="First slide">
 							    			</div>
 							    			<div class="img-producto2 w-100">
-							    				<img class="img-fluid w-100" src="{{ asset('img/productos/'.$productos[$i]->imagen) }}" alt="First slide">
+							    				<img class="img-fluid w-100" src="{{ asset('public/img/productos/'.$productos[$i]->imagen) }}" alt="First slide">
 							    			</div>
 							    			
 							    			
@@ -59,10 +59,10 @@
 							    		
 							    		<div class="col-12 col-lg-4 col-md-5 mt-3 mt-lg-0">
 							    			<div class="img-producto w-100">
-							    				<img class="img-fluid" src="{{ asset('img/productos/'.$productos[$i]->imagen) }}" alt="First slide">
+							    				<img class="img-fluid" src="{{ asset('public/img/productos/'.$productos[$i]->imagen) }}" alt="First slide">
 							    			</div>
 							    			<div class="img-producto2 w-100">
-							    				<img class="img-fluid" src="{{ asset('img/productos/'.$productos[$i]->imagen) }}" alt="First slide">
+							    				<img class="img-fluid" src="{{ asset('public/img/productos/'.$productos[$i]->imagen) }}" alt="First slide">
 							    			</div>
 							    			
 							    			

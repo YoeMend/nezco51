@@ -11,7 +11,7 @@
 		<div class="row justify-content-around align-items-center">
 
 			<div class="col-lg-4 col-md-4 col-6 pt-3 pt-md-0">
-				<img src="{{ asset('images/LogoNezco.svg') }}" alt="">
+				<img src="{{ asset('public/images/LogoNezco.svg') }}" alt="">
 			</div>
 
 			<div class="col-lg-6 col-md-6 my-lg-0 my-5">
@@ -30,7 +30,7 @@
 @section ('img-float')
 
 	{{-- SEPARADOR --}}
-	<div class="container-fluid p-4 p-lg-5 bg-fixed" style="background-image: url('{{ asset('images/fondoValores.png') }}');">
+	<div class="container-fluid p-4 p-lg-5 bg-fixed" style="background-image: url('{{ asset('public/images/fondoValores.png') }}');">
 		<div class="container">
 			<div class="row ">
 				<div class="my-5 py-5"></div>
