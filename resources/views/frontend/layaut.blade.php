@@ -152,7 +152,11 @@
 						</div>
 					</div>
 					<div class="col-4 col-md-2 col-lg-1 sticky-top pt-3  float-right">
+<<<<<<< HEAD
 						<img class="img-fluid" src="{{ asset('public/images/LogoPositivo.svg') }}" alt="">
+=======
+						<img class="img-fluid" src="{{ asset('images/LogoPositivo.svg') }}" alt="">
+>>>>>>> bc102a30696c0eb0eeed5681461c740d81db9a29
 					</div>
 				</div>
 

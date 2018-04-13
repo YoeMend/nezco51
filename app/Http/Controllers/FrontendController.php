@@ -120,6 +120,9 @@ class FrontendController extends Controller
 
 		$documentos = Documentos::where('publico', 'Si')->get();
 
+
+		$documentos = Documentos::where('publico', 'Si')->get();
+
 		$archivos = Archivo::where('publico','Si')->get();
 		
 		return view('frontend.leyes')->with('categorias_documentos', $categorias_documentos)->with('documentos', $documentos)->with('archivos', $archivos );
