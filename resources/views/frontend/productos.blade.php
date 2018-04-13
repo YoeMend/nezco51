@@ -16,7 +16,7 @@
 
 			<div class="col-lg-12">
 					<div class="form-group col-lg-4 col-md-6 offset-md-6 offset-lg-8 p-0">
-						<form action="">
+						<form action="" accept-charset="UTF-8">
 							<input type="text" class="form-control" placeholder="Buscar">
 						</form> 
 					</div>
@@ -71,7 +71,7 @@
 				@foreach($productos as $producto )	
 				<div class="card">
 					<div class="py-2 border-bottom">
-						<img src="{{ asset('img/productos/'.$producto->imagen) }}" alt="" class="img-fluid">
+						<img src="{{ asset('public/img/productos/'.$producto->imagen) }}" alt="" class="img-fluid">
 						<div class="">
 							{{-- ENLACE --}}
 							<a class="c-vino" href="productos_detail/{{ $producto->id }}">

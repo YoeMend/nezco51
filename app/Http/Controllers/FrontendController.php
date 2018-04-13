@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 @session_start();
 use Illuminate\Http\Request;
@@ -14,23 +13,30 @@ use App\Galeria;
 use App\Imagenes;
 use App\Video;
 use App\TipoProducto;
-use Mail;
+use App\Archivo;
 
 class FrontendController extends Controller
 {
+	public function construccion(){
+		return view('frontend.construccion');
+	}
     public function index(){
     	$id=1;
-
         $imagenes= Imagenes::find($id);
         $_SESSION['banner'] = $imagenes->url;
-        
-    	$servicios = DB::table('servicio')-> where('publico','Si')->where('inicio','1')->orderBy('posicion', 'ASC')-> get();
-    	$productos = DB::table('producto')-> where('publico','Si')->where('inicio','1')->orderby('posicion', 'ASC')-> get();
-    	$logo_empresa   = DB::table('empresa')-> where('publico','Si')->where('estatus','Activo')-> get();
+        //dd($_SESSION['banner']);
+    	$servicios 			= Servicio::where('publico','Si')->where('inicio','1')->orderBy('posicion', 'ASC')-> get();
+    	$productos 			= Producto::where('publico','Si')->where('inicio','1')->orderby('posicion', 'ASC')-> get();
+    	$empresas			= Empresa:: where('publico','Si')->where('estatus','Activo')-> get();
+    	$videos_clientes	= Video::where('publico','Si')->where('categoria_video_id','2')->where('inicio','1')-> get();
+    	$video   			= Video::where('publico','Si')->where('categoria_video_id','1')-> first();
 
-    	$video   = Video::where('publico','Si')->where('categoria_video_id','1')-> first();
-        
-		return view('frontend.index')->with('servicios',$servicios)->with('productos',$productos)->with('logo_empresa',$logo_empresa)->with('video',$video);
+		return view('frontend.index')
+				->with('servicios',$servicios)
+				->with('productos',$productos)
+				->with('empresas',$empresas)
+				->with('videos_clientes',$videos_clientes)
+				->with('video',$video);
 	}
 	
 	public function nosotros(){
@@ -82,17 +88,27 @@ class FrontendController extends Controller
 	}
 	public function productos_detail($id){
 
-		$producto = Producto::where('id', '1')->where('publico','Si')->first();
+		$producto = Producto::where('id', $id)->where('publico','Si')->first();
 		
-		$productos = Producto::where('publico','Si')->get();
+		$producto_categoria = CategoriaProducto::where('id', $producto->categoria_producto_id )->where('estatus','Activo')->first();
 
 		$categorias_productos = CategoriaProducto::where('estatus','Activo')->get();
 
-		// $tipo_productos = TipoProducto::where('estatus', 'Activo')->get();
+		$productos_filter = Producto::where('publico','Si')->orderBy('posicion', 'ASC')->get();
 
-		// $imagenes = Imagenes::where('publico', 'Si')->where('categoria_imagen_id', $categoriaid)->where('tipo_id', $id)->get();
+		$tipos_producto = TipoProducto::where('estatus', 'Activo')->get();
 
-			return view('frontend.productos_detail')->with('producto',$producto)->with('categorias_productos',$categorias_productos);
+		$imagenes = Imagenes::where('publico', 'Si')->where('categoria_imagen_id', '1')->where('tipo_id', $id)->get();
+
+		//dd($imagenes);
+
+			return view('frontend.productos_detail')
+					->with('producto',$producto)
+					->with('productos_filter',$productos_filter)
+					->with('tipos_producto',$tipos_producto)
+					->with('imagenes',$imagenes)
+					->with('producto_categoria',$producto_categoria)
+					->with('categorias_productos',$categorias_productos);
 
 		//->with('tipo_productos', $tipo_productos)->with('imagenes',$imagenes);
 
@@ -100,23 +116,13 @@ class FrontendController extends Controller
 
 	public function leyes(){
 
-		$categorias_documentos = DB::table('categoria_documentos')
-								 -> where('estatus','Activo')
-								 -> get();
+		$categorias_documentos = CategoriaDocumentos::where('estatus','Activo')-> get();
 
-		$documentos = DB::table('documentos')->where('publico', 'Si')->get();
+		$documentos = Documentos::where('publico', 'Si')->get();
+
+		$archivos = Archivo::where('publico','Si')->get();
 		
-		return view('frontend.leyes')->with('categorias_documentos', $categorias_documentos)->with('documentos', $documentos);
-	}
-	public function leyesF($id){
-
-		$categorias_documentos = DB::table('categoria_documentos')
-								 -> where('estatus','Activo')
-								 -> get();
-
-		$documentos = DB::table('documentos')->where('categoria_documento_id', $id)->get();
-
-		return view('frontend.leyes')->with('categorias_documentos', $categorias_documentos)->with('documentos', $documentos);
+		return view('frontend.leyes')->with('categorias_documentos', $categorias_documentos)->with('documentos', $documentos)->with('archivos', $archivos );
 	}
 
 	public function documentDetail($id){
@@ -127,25 +133,16 @@ class FrontendController extends Controller
 	}
 	public function galeriaFront(){
 
-		//$galerias = Galeria::where('publico','Si')->get();
-         $galerias = DB::table('galeria as a')
+		$galerias = DB::table('galeria as a')
                 ->join('imagenes as b','a.id','=','b.tipo_id')
                 ->select(DB::raw('min(b.url) as zurl'),'a.id','a.nombre','a.publico', 'b.publico as pub')
                 ->where('a.publico','Si')
                 ->where('b.publico','Si')
                 ->where('b.categoria_imagen_id',3)
                 ->groupby('a.id')->get();
-                         
-       
-       // ->select('a.id','a.codigo','a.titulo','a.descripcion as 
-                   
-		//$imagenes = Galeria::find(1)->imagenesGalery()->where('categoria_imagen_id','=','3')->first();
-
-		//$imagenes = Imagenes::where('publico', 'Si')->first();
 
 		return view('frontend.galeria')->with('galerias', $galerias);
 	}
-
 	public function galeria_detail($id_categoria, $id_galeria){
 
 		$imagenes = Imagenes::where('categoria_imagen_id',$id_categoria)->where('tipo_id',$id_galeria)->where('publico','Si')->get();
@@ -164,21 +161,11 @@ class FrontendController extends Controller
 	}
 	public function enviar(Request $request)
 	{
-	   $texto=$request["mensaje"];
-	   $email = $request["email"];
-	   $nombres= $request["nombres"];
-	   $data=[
-                "email"=>$email,
-                "texto"=>$texto,
-                "nombres"=>$nombres,
-                
-                
-            ];
-	   
-
-       Mail::send('emails.template', array('nombres'=>Input::get('nombres')), function($message){
-        $message->to(Input::get('email'), Input::get('nombres').' '.Input::get('texto'))->subject('Contacto Nezco!');
-    });
-
-	}
+       Mail::send('emails.template',$request->all(), function ($msj)  {
+            $msj->subject('Correo de Contacto');
+            $msj->to('yoe318@gmail.com');
+        });	}
+	
 }
+
+
