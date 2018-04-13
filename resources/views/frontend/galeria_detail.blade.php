@@ -3,9 +3,6 @@
 
 @section('tit-cabecera')
 
-@section ('cabecera')
-	@include ('frontend.cabecera')
-@endsection
 
 @section ('content')
 

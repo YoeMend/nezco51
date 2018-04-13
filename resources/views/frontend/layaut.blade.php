@@ -67,7 +67,7 @@
 
 		{{-- CONTENIDO --}}
 
-		<div class="container-fluid p-2 p-lg-5 bg-white box-sh">
+		<div class="container-fluid p-2 p-lg-5 bg-white">
 
 					@yield('content')
 
@@ -86,14 +86,14 @@
 						<div class="row">
 							<ul class="nav">
 							  <li class="nav-item item-footer">
-							    <a class="nav-link active" href="#">Inicio</a>
+							    <a class="nav-link active" href="{{ route('frontend.index') }}">Inicio</a>
 							  </li>
 							  <li class="nav-item item-footer">
-							    <a class="nav-link" href="#">Nosotros</a>
+							    <a class="nav-link" href="{{ route('frontend.nosotros') }}">Nosotros</a>
 			 				 </li>
 							  <li class="nav-item item-footer">
-							    <a class="nav-link" href="#">Capacitación</a>
-							    	<ul class="nav flex-column  sub-item-footer">
+							    <a class="nav-link" href="{{ route('frontend.servicios') }}">Capacitación</a>
+							    	{{-- <ul class="nav flex-column  sub-item-footer">
 							    		<li class="nav-item pl-2">
 											<a class="nav-link" href="">Capacitación</a>
 							    		</li>
@@ -103,11 +103,11 @@
 							    		<li class="nav-item pl-2">
 											<a class="nav-link" href="">Capacitación</a>
 							    		</li>
-							    	</ul>
+							    	</ul> --}}
 							  </li>
 							  <li class="nav-item item-footer">
-							    <a class="nav-link" href="#">Suministros</a>
-							    	<ul class="nav flex-column sub-item-footer">
+							    <a class="nav-link" href="{{ route('frontend.productos') }}">Suministros</a>
+							    	{{-- <ul class="nav flex-column sub-item-footer">
 							    		<li class="nav-item pl-2">
 											<a class="nav-link" href="">Suministros</a>
 							    		</li>
@@ -126,11 +126,11 @@
 							    		<li class="nav-item pl-2">
 											<a class="nav-link" href="">Suministros</a>
 							    		</li>
-							    	</ul>
+							    	</ul> --}}
 							  </li>
 							  <li class="nav-item item-footer">
-							    <a class="nav-link" href="#">Leyes</a>
-							    	<ul class="nav flex-column sub-item-footer">
+							    <a class="nav-link" href="{{ route('frontend.leyes') }}">Leyes</a>
+							    	{{-- <ul class="nav flex-column sub-item-footer">
 							    		<li class="nav-item pl-2">
 											<a class="nav-link" href="">Leyes</a>
 							    		</li>
@@ -140,10 +140,10 @@
 							    		<li class="nav-item pl-2">
 											<a class="nav-link" href="">Leyes</a>
 							    		</li>
-							    	</ul>
+							    	</ul> --}}
 							  </li>
 							  <li class="nav-item item-footer">
-							    <a class="nav-link" href="#">Galería</a>
+							    <a class="nav-link" href="{{ route('frontend.galeriaFront') }}">Galería</a>
 							  </li>
 							  <li class="nav-item item-footer">
 							    <a class="nav-link" href="#">Contacto</a>
@@ -152,7 +152,7 @@
 						</div>
 					</div>
 					<div class="col-4 col-md-2 col-lg-1 sticky-top pt-3  float-right">
-						<img class="img-fluid" src="{{ asset('images/logoPositivo.svg') }}" alt="">
+						<img class="img-fluid" src="{{ asset('images/LogoPositivo.svg') }}" alt="">
 					</div>
 				</div>
 

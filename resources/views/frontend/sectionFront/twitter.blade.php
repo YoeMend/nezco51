@@ -10,7 +10,7 @@
 							</div>
 							<div class="col-12">
 								<h1 class="c-blue">Siguenos en Twitter</h1>
-							<h2><a class="c-vino" href="#">@Nezco</a></h2>
+							<h2><a class="c-vino" href="#">@NezcoVE</a></h2>
 							</div>
 						</div>
 						

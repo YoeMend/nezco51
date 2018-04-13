@@ -4,11 +4,6 @@
 
 @section('tit-cabecera', "Nosotros")
 
-@section ('cabecera')
-	@include ('frontend.cabecera')
-		
-@endsection
-
 @section ('content')
 
 	{{-- NOSOTROS --}}

@@ -16,9 +16,9 @@
 				<h2 class="tit">{{ $documentos->nombre }}</h2>
 			</div>
 			<div class="col-12">
-				<p>
-					{{ $documentos->descripcion }}
-				</p>
+				
+					<?= $documentos->descripcion; ?> 
+				
 			</div>
 		</div>
 	</div>
