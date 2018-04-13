@@ -42,7 +42,7 @@
 
 							  			@if ($productof->categoria_producto_id == $producto_categoria->id)
 							  			
-									    <a id="filter_item" href="productos_detail/{{ $productof->id }}" >
+									    <a id="filter_item" href="{{ $productof->id }}" >
 									    	{{ $productof->titulo }}
 									    </a>
 									    <hr class="mt-0">
@@ -125,8 +125,8 @@
 		</div>
 	</div>
 
-<script src="{{ asset('public/js/lightgallery.js') }}"></script>
-         <script src="{{ asset('public/js/minigrid.min.js') }}"></script>
+<script src="{{ asset('js/lightgallery.js') }}"></script>
+         <script src="{{ asset('js/minigrid.min.js') }}"></script>
         <script>
             lightGallery(document.getElementById('lightgallery'));
         </script>

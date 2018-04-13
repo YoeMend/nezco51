@@ -134,13 +134,15 @@ class FrontendController extends Controller
 	}
 	public function galeriaFront(){
 
-		$galerias = Galeria::where('publico','Si')->get();
+		$galerias = DB::table('galeria as a')
+                ->join('imagenes as b','a.id','=','b.tipo_id')
+                ->select(DB::raw('min(b.url) as zurl'),'a.id','a.nombre','a.publico', 'b.publico as pub')
+                ->where('a.publico','Si')
+                ->where('b.publico','Si')
+                ->where('b.categoria_imagen_id',3)
+                ->groupby('a.id')->get();
 
-		$imagenes = Galeria::find(1)->imagenesGalery()->where('categoria_imagen_id','=','3')->first();
-
-		//$imagenes = Imagenes::where('publico', 'Si')->first();
-
-		return view('frontend.galeria')->with('galerias', $galerias)->with('imagenes', $imagenes);
+		return view('frontend.galeria')->with('galerias', $galerias);
 	}
 	public function galeria_detail($id_categoria, $id_galeria){
 

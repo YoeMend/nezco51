@@ -110,7 +110,7 @@
 	</div>
 </div>
 
-	<script src="{{ asset('public/js/minigrid.min.js') }}"></script>
+	<script src="{{ asset('js/minigrid.min.js') }}"></script>
 	<script>
 
     (function(){
