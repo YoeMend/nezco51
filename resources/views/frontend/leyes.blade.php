@@ -44,11 +44,9 @@
 							      <td class="col-3">
 							      	@foreach($archivos as $archivo)
 							      		@if($archivo->documento_id == $documento->id)
-<<<<<<< HEAD
-										<a href="{{ asset('public/documentos/'.$archivo->url) }}" download>
-=======
+
 										<a href="{{ asset('documentos/'.$archivo->url) }}" download>
->>>>>>> bc102a30696c0eb0eeed5681461c740d81db9a29
+
 											<i class="fa fa-download" aria-hidden="true"></i>
 										</a>
 										@endif

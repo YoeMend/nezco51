@@ -7,11 +7,11 @@
 	<meta name="author" content="Nezco">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	{{-- MAIN FOR BOOTSTRAP --}}
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/main.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ asset('public/css/lightgallery.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/css/scroll.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/lightgallery.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/scroll.css') }}">
 
 
 </head>
@@ -152,11 +152,9 @@
 						</div>
 					</div>
 					<div class="col-4 col-md-2 col-lg-1 sticky-top pt-3  float-right">
-<<<<<<< HEAD
-						<img class="img-fluid" src="{{ asset('public/images/LogoPositivo.svg') }}" alt="">
-=======
+
 						<img class="img-fluid" src="{{ asset('images/LogoPositivo.svg') }}" alt="">
->>>>>>> bc102a30696c0eb0eeed5681461c740d81db9a29
+
 					</div>
 				</div>
 
@@ -167,27 +165,27 @@
 							<div class="row">
 								<div class="col">
 									<a href="">
-										<img src="{{ asset('public/images/icn-face.svg') }}" alt="" class="img-fluid">
+										<img src="{{ asset('images/icn-face.svg') }}" alt="" class="img-fluid">
 									</a>
 								</div>
 								<div class="col">
 									<a href="">
-										<img src="{{ asset('public/images/icn-instagram.svg') }}" alt="" class="img-fluid">
+										<img src="{{ asset('images/icn-instagram.svg') }}" alt="" class="img-fluid">
 									</a>
 								</div>
 								<div class="col">
 									<a href="">
-										<img src="{{ asset('public/images/icn-plus.svg') }}" alt="" class="img-fluid">
+										<img src="{{ asset('images/icn-plus.svg') }}" alt="" class="img-fluid">
 									</a>
 								</div>
 								<div class="col">
 									<a href="">
-										<img src="{{ asset('public/images/icn-twitter.svg') }}" alt="" class="img-fluid">
+										<img src="{{ asset('images/icn-twitter.svg') }}" alt="" class="img-fluid">
 									</a>
 								</div>
 								<div class="col">
 									<a href="">
-										<img src="{{ asset('public/images/icn-youtube.svg') }}" alt="" class="img-fluid">
+										<img src="{{ asset('images/icn-youtube.svg') }}" alt="" class="img-fluid">
 									</a>
 								</div>
 							</div>
@@ -220,12 +218,12 @@
 
 @yield('javascript')
 
-    <script src="{{ asset('public/js/ScrollTrigger.min.js') }}"></script>
-    <script src="{{ asset('public/js/jquery-3.2.1.min.js') }}"></script>
-    <script src="{{ asset('public/js/popper.min.js') }}"></script>
-    <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('public/js/main.js') }}"></script>
-    <script src="{{ asset('public/js/plugins/pace.min.js') }}"></script>
+    <script src="{{ asset('js/ScrollTrigger.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/plugins/pace.min.js') }}"></script>
     <!-- Page specific javascripts-->
     <script type="text/javascript" src="{{ asset('js/plugins/chart.js') }}"></script>
    

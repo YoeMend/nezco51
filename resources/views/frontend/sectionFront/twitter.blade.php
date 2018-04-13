@@ -6,7 +6,7 @@
 					<div data-scroll="toggle(.scaleDownIn, .scaleDownOut)" class="col-md-12  col-lg-6 col-12 text-center ">
 						<div class="row justify-content-center ">
 							<div class="col-3 col-md-2 mb-lg-4">
-								<img class="img-fluid c-white"  src="{{ asset('public/images/Twitter.svg') }}" alt="">
+								<img class="img-fluid c-white"  src="{{ asset('images/Twitter.svg') }}" alt="">
 							</div>
 							<div class="col-12">
 								<h1 class="c-blue">Siguenos en Twitter</h1>
