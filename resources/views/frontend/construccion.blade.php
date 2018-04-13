@@ -15,7 +15,7 @@
 		}
 
 		body{
-			background-image: url('{{ asset('public/images/construccion.svg') }}');
+			background-image: url('{{ asset('images/construccion.svg') }}');
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center center;
@@ -49,7 +49,7 @@
 <body>
 	
 	<div class="img">
-		<img src="{{ asset('public/images/LogoNezco.svg') }}" alt="">
+		<img src="{{ asset('images/LogoNezco.svg') }}" alt="">
 		<h1>Sitio en Construcción</h1>
 	</div>
 	
