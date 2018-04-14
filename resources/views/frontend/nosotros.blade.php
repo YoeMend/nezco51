@@ -42,7 +42,8 @@
 
 @section ('etc')
 	{{-- MISION VISION --}}
-	<div class="container-fluid p-4 p-lg-5 h-50  bg-white">
+	<div class="container-fluid p-4 p-lg-5   bg-white">
+		
 		<div class="container my-5">
 			<div class="row justify-content-around ">
 				<div class="text-center col-12 col-md-6 col-lg-5">

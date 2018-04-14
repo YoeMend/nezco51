@@ -14,13 +14,13 @@
 		<div class="row">
 
 			{{-- BUSCADOR --}}
-			<div class="col-lg-12">
+			{{-- <div class="col-lg-12">
 					<div class="form-group col-md-4 offset-md-8">
 						<form action="">
 							<input type="text" class="form-control" placeholder="Buscar">
 						</form> 
 					</div>
-			</div>
+			</div> --}}
 
 			<div class="col">
 				<div class="row">
@@ -31,7 +31,7 @@
 					</button>
 
 						<div class="col-12 collapse" id="{{ $categoria->id }}">
-						  <div class=" card-body">
+						  <div class=" card-body p-0">
 
 						    <table class="table table-striped">
 							  <tbody>

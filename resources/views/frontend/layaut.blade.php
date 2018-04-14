@@ -93,60 +93,21 @@
 			 				 </li>
 							  <li class="nav-item item-footer">
 							    <a class="nav-link" href="{{ route('frontend.servicios') }}">Capacitación</a>
-							    	{{-- <ul class="nav flex-column  sub-item-footer">
-							    		<li class="nav-item pl-2">
-											<a class="nav-link" href="">Capacitación</a>
-							    		</li>
-							    		<li class="nav-item pl-2">
-											<a class="nav-link" href="">Capacitación</a>
-							    		</li>
-							    		<li class="nav-item pl-2">
-											<a class="nav-link" href="">Capacitación</a>
-							    		</li>
-							    	</ul> --}}
 							  </li>
 							  <li class="nav-item item-footer">
 							    <a class="nav-link" href="{{ route('frontend.productos') }}">Suministros</a>
-							    	{{-- <ul class="nav flex-column sub-item-footer">
-							    		<li class="nav-item pl-2">
-											<a class="nav-link" href="">Suministros</a>
-							    		</li>
-							    		<li class="nav-item pl-2">
-											<a class="nav-link" href="">Suministros</a>
-							    		</li>
-							    		<li class="nav-item pl-2">
-											<a class="nav-link" href="">Suministros</a>
-							    		</li>
-							    		<li class="nav-item pl-2">
-											<a class="nav-link" href="">Suministros</a>
-							    		</li>
-							    		<li class="nav-item pl-2">
-											<a class="nav-link" href="">Suministros</a>
-							    		</li>
-							    		<li class="nav-item pl-2">
-											<a class="nav-link" href="">Suministros</a>
-							    		</li>
-							    	</ul> --}}
+							    	
 							  </li>
 							  <li class="nav-item item-footer">
 							    <a class="nav-link" href="{{ route('frontend.leyes') }}">Leyes</a>
-							    	{{-- <ul class="nav flex-column sub-item-footer">
-							    		<li class="nav-item pl-2">
-											<a class="nav-link" href="">Leyes</a>
-							    		</li>
-							    		<li class="nav-item pl-2">
-											<a class="nav-link" href="">Leyes</a>
-							    		</li>
-							    		<li class="nav-item pl-2">
-											<a class="nav-link" href="">Leyes</a>
-							    		</li>
-							    	</ul> --}}
+							    	
 							  </li>
 							  <li class="nav-item item-footer">
 							    <a class="nav-link" href="{{ route('frontend.galeriaFront') }}">Galería</a>
 							  </li>
 							  <li class="nav-item item-footer">
-							    <a class="nav-link" href="#">Contacto</a>
+							  	<a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="">Contacto</a>
+							    
 							  </li>
 							</ul>
 						</div>
@@ -201,6 +162,7 @@
 							</p>
 						</div>
 					</div>
+				</div>
 
 			</footer>
 		</div>

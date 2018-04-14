@@ -129,6 +129,9 @@ body {
 
 h1 {
   font-size: 2rem; }
+  @media only screen and (max-width: 767px) {
+    h1 {
+      font-size: 1.5rem; } }
 
 a:hover {
   color: black; }

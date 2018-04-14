@@ -3,14 +3,14 @@
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
 
-		      <div class="modal-header p-0">
+		      {{-- <div class="modal-header p-0">
 		      	<div class="box-sh-m h-10em w-100 overflow-hidden bg-img" style="background-image: url('{{ asset('images/4.jpg') }}');">
 		      	</div>
 		       
 		        <button type="button" class="close c-white p-0" data-dismiss="modal" aria-label="Close">
 		          <span aria-hidden="true">&times;</span>
 		        </button>
-		      </div>
+		      </div> --}}
 
 		      <div class="modal-body">
 
@@ -43,10 +43,10 @@
 	        	</form>
 		        
 		      </div>
-		      <div class="modal-footer">
+		     {{--  <div class="modal-footer">
 		        <p>
 							</p>
-		      </div>
+		      </div> --}}
 		    </div>
 		  </div>
 		</div>
