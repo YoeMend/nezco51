@@ -36,21 +36,21 @@
 					<div class="row justify-content-center">
 						<img src="{{ asset('images/responsabilidad.png') }}" alt="">
 						<h3 class="col-12 font-italic yellowt">Responsabilidad</h3>
-						<p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus totam ea eaque nisi delectus neque aut officia incidunt officiis fuga, ipsum soluta nihil corporis reprehenderit odio aliquam nesciunt atque tenetur!</p>
+						
 					</div>
 				</div>
 				<div data-scroll="toggle(.fromTopIn, .fromTopOut)" class="col c-white text-center m-1">
 					<div class="row justify-content-center">
 						<img src="{{ asset('images/solidaridad.png') }}" alt="">
 						<h3 class="col-12 font-italic yellowt">Solidaridad</h3>
-						<p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus totam ea eaque nisi delectus neque aut officia incidunt officiis fuga, ipsum soluta nihil corporis reprehenderit odio aliquam nesciunt atque tenetur!</p>
+						
 					</div>
 				</div>
 				<div data-scroll="toggle(.fromTopIn, .fromTopOut)" class="col c-white text-center m-1">
 					<div class="row justify-content-center">
 						<img src="{{ asset('images/innovacion.png') }}" alt="">
 						<h3 class="col-12 font-italic yellowt">Innovación</h3>
-						<p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus totam ea eaque nisi delectus neque aut officia incidunt officiis fuga, ipsum soluta nihil corporis reprehenderit odio aliquam nesciunt atque tenetur!</p>
+						
 					</div>
 				</div>
 			</div>

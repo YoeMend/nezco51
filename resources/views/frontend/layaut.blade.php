@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="{{ asset('css/scroll.css') }}">
 
 
+<link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
+<link rel="icon" type="image/png" href="{{ asset('images/favicon-32x32.png') }}" sizes="32x32" />
+<link rel="icon" type="image/png" href="{{ asset('images/favicon-16x16.png') }}" sizes="16x16" />
+
+
 </head>
 <body class="h-100 ">
 	<div class="container-fluid h-100 p-0">
