@@ -181,11 +181,11 @@ Route::resource('usuarios', 'configurar\UsersController');
 //////////////////////////
 // RUTAS FRONTEND
 //////////
+//Route::get('/', [
+  //    'as'=>'frontend.construccion',
+  //    'uses'=>'FrontendController@construccion' 
+    //  ]);
 Route::get('/', [
-      'as'=>'frontend.construccion',
-      'uses'=>'FrontendController@construccion' 
-      ]);
-Route::get('index', [
       'as'=>'frontend.index',
       'uses'=>'FrontendController@index' 
       ]);

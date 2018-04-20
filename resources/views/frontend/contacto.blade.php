@@ -12,13 +12,14 @@
 		        </button>
 		      </div>
 
-		      <div class="modal-body">
+		      <div class="modal-b
+		      ody">
 
 		      	<div class="col pt-2">
 		      		<h3 class="tit">Contáctate con nosotros</h3>
 		      	</div>
 		        
-	        	<form role="form" action="{{ route('enviar') }}" method="POST">
+	        	<form method="POST" action="{{route ('enviar')}}" accept-charset="UTF-8" enctype="multipart/form-data"><input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 	        		<div class="row">
 			        	<div class="form-group col-12 col-md-6">
 			        		<input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre y Apellido">

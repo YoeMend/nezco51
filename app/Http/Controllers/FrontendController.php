@@ -14,7 +14,7 @@ use App\Imagenes;
 use App\Video;
 use App\TipoProducto;
 use App\Archivo;
-
+use Mail;
 class FrontendController extends Controller
 {
 	public function construccion(){
@@ -166,8 +166,10 @@ class FrontendController extends Controller
 	{
        Mail::send('emails.template',$request->all(), function ($msj)  {
             $msj->subject('Correo de Contacto');
-            $msj->to('yoe318@gmail.com');
-        });	}
+            $msj->to('nezcoweb51@gmail.com');
+        });	
+        return view('frontend.index');
+   }
 	
 }
 
