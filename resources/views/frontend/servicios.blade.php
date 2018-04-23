@@ -2,7 +2,7 @@
  
 @section('title', "Capacitación -")
 
-@section('tit-cabecera', "CAPACITACIÓN Y PERFECCIONAMIENTO DEL CAPITAL HUMANO")
+@section('tit-cabecera', "CAPACITACIÓN Y PERFECCIONAMIENTO DEL TALENTO HUMANO")
 
 @section ('cabecera')
 	@include ('frontend.cabecera')

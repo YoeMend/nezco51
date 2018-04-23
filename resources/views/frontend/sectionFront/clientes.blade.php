@@ -1,7 +1,7 @@
 {{-- CLIENTES --}}
 		<div class="container-fluid py-5 bg-white">
 			<div class="container">
-				<div class="col-12 text-center tit mb-3"><h1>NUESTROS CLIENTES</h1></div>
+				<div class="col-12 text-center tit mb-3"><h1>NUESTROS ALIADOS</h1></div>
 				<div class="row ">
 
 					@foreach($videos_clientes as $videoClient)

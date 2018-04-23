@@ -20,7 +20,7 @@
   background-color: #673AB7; }
 
 .bg-vino {
-  background-color: #811324; }
+  background-color: #401324; }
 
 .bg-greyClaro {
   background-color: #EAEAEA; }
@@ -51,7 +51,7 @@
   color: #2196F3; }
 
 .c-vino {
-  color: #811324; }
+  color: #401324; }
 
 .yellowt {
   color: #CDD50B; }
@@ -196,8 +196,8 @@ a:hover {
   z-index: 1000; }
 
 .enlaces {
-  color: #811324;
-  text-decoration: underline #811324;
+  color: #401324;
+  text-decoration: underline #401324;
   font-weight: bold;
   text-transform: uppercase; }
 
@@ -273,16 +273,16 @@ a:hover {
     display: none; } }
 
 input[type="text"]:focus {
-  border-color: #811324; }
+  border-color: #401324; }
 
 .textarea textarea:focus {
-  border-color: #811324; }
+  border-color: #401324; }
 
 input[type="email"]:focus {
-  border-color: #811324; }
+  border-color: #401324; }
 
 .btn-primary {
-  background-color: #811324;
+  background-color: #401324;
   border: none; }
 
 ::selection {
@@ -329,7 +329,7 @@ input[type="email"]:focus {
     background-color: #989898;
     transition: background 0.6s; }
   .item-ley i:hover {
-    background-color: #811324; }
+    background-color: #401324; }
 
 .item-l:hover .item-ley {
   display: block; }
@@ -351,7 +351,7 @@ input[type="email"]:focus {
     background-color: #989898;
     transition: background 0.6s; }
   .item-galery i:hover {
-    background-color: #811324; }
+    background-color: #401324; }
 
 .item-g {
   text-decoration: none !important; }

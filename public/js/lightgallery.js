@@ -574,7 +574,7 @@
         }, this.s.backdropDuration);
 
         if (this.s.download) {
-            this.outer.querySelector('.lg-toolbar').insertAdjacentHTML('beforeend', '<a id="lg-download" target="_blank" download class="lg-download lg-icon"></a>');
+            this.outer.querySelector('.lg-toolbar').insertAdjacentHTML('beforeend' , '<a id="lg-download" target="_blank" download class=""></a>'); /*lg-download lg-icon*/
         }
 
         // Store the current scroll top value to scroll back after closing the gallery..

@@ -3,7 +3,7 @@
 		
 			<div class="row my-lg-5">
 				<div class="col-12 text-center">
-					<h1 class="tit">CAPACITACIÓN Y PERFECCIONAMIENTO DE CAPITAL HUMANO</h1>
+					<h1 class="tit">CAPACITACIÓN Y PERFECCIONAMIENTO DEL TALENTO HUMANO</h1>
 				</div>
 				<div class="col my-lg-5 mt-lg-4">
 					<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

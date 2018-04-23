@@ -48,7 +48,7 @@
 				        <a class="nav-link" href="{{ route('frontend.productos') }}">Suministros</a>
 				      </li>
 				      <li class="nav-item">
-				        <a class="nav-link" href="{{ route('frontend.leyes') }}">Leyes</a>
+				        <a class="nav-link" href="{{ route('frontend.leyes') }}">Enlaces de interés</a>
 				      </li>
 				      <li class="nav-item">
 				        <a class="nav-link" href="{{ route('frontend.galeriaFront') }}">Galería</a>
@@ -130,40 +130,40 @@
 						<div class="col-12 col-lg-4 col-md-6">
 							<div class="row">
 								<div class="col">
-									<a href="">
-										<img src="{{ asset('images/icn-face.svg') }}" alt="" class="img-fluid">
+									<a href="https://www.facebook.com/NezcoVE/" target="blank">
+										<img src="{{ asset('images/icn_facebook.svg') }}" alt="" class="img-fluid">
 									</a>
 								</div>
 								<div class="col">
-									<a href="">
-										<img src="{{ asset('images/icn-instagram.svg') }}" alt="" class="img-fluid">
+									<a href="https://www.instagram.com/nezcove/?hl=es-la" target="blank">
+										<img src="{{ asset('images/icn_instagram.svg') }}" alt="" class="img-fluid">
 									</a>
 								</div>
 								<div class="col">
-									<a href="">
-										<img src="{{ asset('images/icn-plus.svg') }}" alt="" class="img-fluid">
+									<a href="" target="blank">
+										<img src="{{ asset('images/icn_linkedin.svg') }}" alt="" class="img-fluid">
 									</a>
 								</div>
 								<div class="col">
-									<a href="">
-										<img src="{{ asset('images/icn-twitter.svg') }}" alt="" class="img-fluid">
+									<a href="https://twitter.com/nezcove" target="blank">
+										<img src="{{ asset('images/icn_twitter.svg') }}" alt="" class="img-fluid">
 									</a>
 								</div>
 								<div class="col">
-									<a href="">
-										<img src="{{ asset('images/icn-youtube.svg') }}" alt="" class="img-fluid">
+									<a href="" target="blank">
+										<img src="{{ asset('images/icn_youtube.svg') }}" alt="" class="img-fluid">
 									</a>
 								</div>
 							</div>
 						</div>
 						<div class="col-12 text-center mt-4 c-white">
 							<p>
-							Av. Fuerzas Aéreas, C.C. Gravina II, nivel mezzanina, locales 2, 3 y 4. Maracay, estado Aragua. <br>
+							Sede Central: Av. Fuerzas Aéreas, C.C. Gravina II, nivel mezzanina, locales 2, 3 y 4. Maracay, estado Aragua. <br>
 							Teléfonos: (0243) 219.61.70 / (0243) 233.21.49 / (0424) 356.57.65 <br>
 							Sucursal Caracas: (0212) 326.00.40 <br>
-							Calle 64 entre Av. 8B y 9 Local No. 8B - 68 <br>
-							Sector Tierra Negra, Maracaibo, estado Zulia. <br>
-							Teléfonos: (0261) 415.74.37 / (0424) 649.16.00 / (0424) 685.04.51
+							Sucursal Maracaibo:(0261) 415.74.37 / (0424) 649.16.00 / (0424) 685.04.51
+							Sucursal Oriente: <br>
+							Tambien estamos en Colombia y Chile.
 							</p>
 						</div>
 					</div>
